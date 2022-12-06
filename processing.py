@@ -5,6 +5,7 @@ import seaborn as sns
 from glob import glob
 #glob allows us to list out all the files in a directory which will be helpfull when we want to read in a bunch of the wav files from this data set
 import librosa
+#It is specific on capturing the audio information to be transformed into a data block.
 import librosa.display
 import IPython.display as ipd
 from itertools import cycle
@@ -33,7 +34,7 @@ pd.Series(y).plot(figsize=(10, 5),
                  color=color_pal[0])
 plt.show()
 
-# Trimming leading/lagging silence
+# Trimming silence
 y_trimmed, _ = librosa.effects.trim(y, top_db=20)
 pd.Series(y_trimmed).plot(figsize=(10, 5),
                   lw=1,
