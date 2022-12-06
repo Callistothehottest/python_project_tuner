@@ -5,7 +5,7 @@ import seaborn as sns
 
 from glob import glob
 
-# import librosa
+import librosa
 import librosa.display
 import IPython.display as ipd
 
@@ -21,9 +21,8 @@ audio_files = glob('../input/ravdess-emotional-speech-audio/*/*.wav')
 # Play audio file
 ipd.Audio(audio_files[0])
 
-# y, sr = librosa.read(audio_files[0])
+y, sr = librosa.read(audio_files[0])
 # this allows us to read in a file
-
 # y is the raw data of the audio file and sr is an integer value of the sample rate
 
 y, sr = librosa.load(audio_files[0])
