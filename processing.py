@@ -17,7 +17,7 @@ color_cycle = cycle(plt.rcParams["axes.prop_cycle"].by_key()["color"])
 
 # Reading in Audio Files
 # audio_files = glob('Dream on.m4a')
-audio_files = glob('../input/ravdess-emotional-speech-audio/*/*.wav')
+audio_files = glob('C:\Users\zilbe\Downloads\python_audios\Dream on.m4a')
 # Play audio file
 ipd.Audio(audio_files[0])
 
